@@ -10,8 +10,8 @@ default: &default
 
 development:
   <<: *default
-  database: tdd_development
+  database: retro_development
 
 test:
   <<: *default
-  database: tdd_test
+  database: retro_test

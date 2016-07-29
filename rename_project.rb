@@ -2,7 +2,7 @@
 
 @paths = [
   'Rakefile',
-  'spec/spec_helper.rb',
+  'spec/rails_helper.rb',
   'config/application.rb',
   'config/environment.rb',
   'config/routes.rb',

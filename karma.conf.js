@@ -19,7 +19,7 @@ module.exports = function (config) {
     files: [
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
-      'spec/javascripts/support/spec_helper.js',
+      'spec/javascripts/support/rails_helper.js',
       'app/assets/javascripts/*.js',
       'app/assets/javascripts/*/*.js',
       'spec/javascripts/*_spec.js',
