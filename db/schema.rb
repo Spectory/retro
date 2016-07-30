@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20160730065340) do
     t.string   "title"
     t.text     "body"
     t.string   "create_by"
-    t.boolean  "note_type"
+    t.integer  "note_type"
     t.integer  "meeting_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

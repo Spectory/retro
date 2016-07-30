@@ -4,7 +4,7 @@ class CreateNotes < ActiveRecord::Migration[5.0]
       t.string  :title
       t.text    :body
       t.string  :create_by
-      t.boolean :note_type
+      t.integer :note_type
       t.belongs_to :meeting, index: true
 
       t.timestamps
