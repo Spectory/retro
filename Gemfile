@@ -28,6 +28,7 @@ group :development, :test do
   gem 'awesome_print'
   gem 'pry'
   gem 'pry-doc'
+  gem 'factory_girl_rails'
 end
 
 group :test do
