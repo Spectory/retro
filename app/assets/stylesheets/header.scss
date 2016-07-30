@@ -1,0 +1,14 @@
+@import "colors";
+
+header {
+  background-color: $secondery-backgound-color;
+  color: $spectory-orange;
+  font-size: 250%;
+  font-weight: 300;
+
+  h1 {
+    margin: 5px;
+    line-height: 250%;
+    font-weight: 600;
+  }
+}

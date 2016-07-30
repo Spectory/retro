@@ -20,6 +20,10 @@ class NotesController < ApplicationController
     @note = Note.find(params[:id])
   end
 
+  def index
+    @notes = Note.paginate(page: params[:page])
+  end
+
   private
 
   def note_params

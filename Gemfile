@@ -7,6 +7,8 @@ gem 'uglifier'
 gem 'yui-compressor'
 gem 'ejs'
 gem 'colorize'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 gem 'pg'
 # gem 'turbolinks'  * use only with round trip apps. single page apps dont need that.
