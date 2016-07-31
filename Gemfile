@@ -9,7 +9,7 @@ gem 'ejs'
 gem 'colorize'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
-
+gem 'jquery-rails'
 gem 'pg'
 # gem 'turbolinks'  * use only with round trip apps. single page apps dont need that.
 # gem 'aws-sdk'     * amazon access
