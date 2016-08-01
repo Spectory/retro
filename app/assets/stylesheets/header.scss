@@ -2,27 +2,52 @@
 @import "custom";
 
 header {
+  $logo-width: 50px;
+  $header-height: 100px;
+
   background-color: $secondery-backgound-color;
   color: $spectory-orange;
-  height: 100px;
-  // display: flex;
-  // align-content: center;
-
-  span {
-    font-family: $retro-font;
+  height: $header-height;
+  padding: 5px;
+  .header-container {
+    float: left;
     display: flex;
     align-items: center;
-    justify-content: center;
-    float: left;
+    justify-content: space-between;
+    width: calc(100% - #{$logo-width});
     height: 100%;
-    font-size: 400%;
-    // font-weight: 600;
-    padding-left: 1%;
-  }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 15px;
+      .nav-btn {
+        display: flex;
+        // height: $header-height;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $main-backgound-color;
+        margin: 5px;
+      }
+      a {
+        padding: 25px;
+      }
 
+    }
+
+    span {
+      font-family: $retro-font;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      font-size: 400%;
+      // font-weight: 600;
+      padding-left: 1%;
+    }
+  }
   .logo {
     float: right;
-    height: 96%;
-    padding: 1%;
+    width: $logo-width;
   }
 }
