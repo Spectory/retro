@@ -1,5 +1,14 @@
 @import "colors";
 
+
+@font-face {
+  font-family: 'retro'; /*a name to be used later*/
+  src: url('/fonts/SEASRN__.ttf'); /*URL to font*/
+}
+
+$main-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$retro-font: "retro", sans-serif;
+
 html {
   overflow-y: scroll;
 }
@@ -9,7 +18,7 @@ body {
   background-color: $main-backgound-color;
   color: $main-text-color;
   line-height: 1.5;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: $main-font;
   font-weight: 300;
   padding: 1em;
 }
