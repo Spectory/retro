@@ -1,11 +1,11 @@
 <header>
   <div class='header-container'>
-    <span>Retro-Spec</span>
+    <%= link_to 'Retro-Spec', root_path, class: 'header-title' %>
 
     <nav>
-      <div class='nav-btn'> <a href="#">Notes</a> </div>
-      <div class='nav-btn'> <a href="#">Meetings</a> </div>
-      <div class='nav-btn'> <a href="#">Actions Items</a> </div>
+      <div class='nav-btn'> <%= link_to "Notes", notes_path %> </div>
+      <div class='nav-btn'> <%= link_to "Meetings todo", root_path %> </div>
+      <div class='nav-btn'> <%= link_to "Action Items todo", root_path %> </div>
     </nav>
   </div>
   <%= image_tag('logo.png', class: "logo") %>

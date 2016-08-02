@@ -10,7 +10,7 @@ class NotesController < ApplicationController
     ap @note
     if @note.save!
       flash[:success] = 'Note Created!'
-      redirect_to @note
+      redirect_to notes_path
     else
       render 'new'
     end
@@ -32,7 +32,7 @@ class NotesController < ApplicationController
     @note = Note.find(params[:id])
     if @note.update_attributes(note_params)
       flash[:success] = "note updated"
-      redirect_to @note
+      redirect_to notes_path
     else
       render 'edit'
     end

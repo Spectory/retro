@@ -1,5 +1,5 @@
 <% provide(:title, 'Notes') %>
-<h1>Notes</h1>
+
 
 <%= will_paginate %>
 
@@ -10,8 +10,8 @@
         <th>Title</th>
         <th>Body</th>
         <th>Created By</th>
-        <th></th>
-        <th></th>
+        <th>-</th>
+        <th>-</th>
      </tr>
     </thead>
     <tbody>
@@ -20,4 +20,5 @@
   </table>
 </div>
 
+<%= button_to "New", new_note_path, method: :get, class: 'btn btn-primary'%>
 <%= will_paginate %>

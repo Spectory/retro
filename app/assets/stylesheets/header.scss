@@ -1,4 +1,5 @@
-@import "colors";
+@import "_colors";
+@import "_placeholders";
 @import "custom";
 
 header {
@@ -6,40 +7,38 @@ header {
   $header-height: 100px;
 
   background-color: $secondery-backgound-color;
-  color: $spectory-orange;
   height: $header-height;
   padding: 5px;
   .header-container {
+    @extend %verticaly-aligned;
     float: left;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: calc(100% - #{$logo-width});
     height: 100%;
     nav {
-      display: flex;
-      align-items: center;
+      @extend %verticaly-aligned;
       justify-content: space-between;
       padding-right: 15px;
       .nav-btn {
-        display: flex;
-        // height: $header-height;
-        align-items: center;
+        @extend %verticaly-aligned;
         justify-content: center;
         border: 2px solid $main-backgound-color;
         margin: 5px;
       }
       a {
+        color: $spectory-orange;
+        text-decoration: none;
         padding: 25px;
       }
-
+      a:hover {
+        font-weight: bold;
+      }
     }
 
-    span {
+    .header-title {
+      @extend %verticaly-aligned;
+      color: $spectory-orange;
+      text-decoration: none;
       font-family: $retro-font;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       height: 100%;
       font-size: 400%;
       // font-weight: 600;
