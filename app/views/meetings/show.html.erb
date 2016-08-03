@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <%= render partial: "action_items_column", locals: {action_items: @previous_action_items} %>
+    </div>
+    <div class="col-sm-3">
+      <%= render partial: "notes_column", locals: {action_items: @previous_action_items} %>
+    </div>
+    <div class="col-sm-3">
+      <%= render partial: "notes_column", locals: {action_items: @previous_action_items} %>
+    </div>
+    <div class="col-sm-3">
+      <%= render partial: "action_items_column", locals: {action_items: @new_action_items} %>
+    </div>
+  </div>
+</div>
