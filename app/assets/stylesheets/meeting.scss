@@ -1,3 +1,15 @@
-// Place all the styles related to the meeting controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "_colors";
+
+.column {
+  background-color: $secondery-backgound-color;
+  height: 80vh;
+  width: calc(25% - 10px);
+  margin: 2px;
+  overflow-y: auto;
+  // opacity: .5;
+  h4 {
+    display: flex;
+    justify-content: space-around;
+    text-decoration: underline;
+  }
+}

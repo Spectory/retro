@@ -5,7 +5,9 @@ angular.module('app.directives', []);
 angular.module('app.filters', []);
 angular.module('app.controllers', []);
 
-var app = angular.module('app', ['app.services', 'app.directives', 'app.filters', 'app.controllers'], ['$httpProvider',
+window.app = angular.module('app',
+['app.services', 'app.directives', 'app.filters', 'app.controllers'],
+['$httpProvider',
   function ($httpProvider) {
     'use strict';
 
@@ -15,7 +17,7 @@ var app = angular.module('app', ['app.services', 'app.directives', 'app.filters'
     $httpProvider.defaults.headers.patch['X-CSRF-Token'] = csrf_token;
   }]);
 
-angular.element(document).ready(function () {
+window.angular.element(document).ready(function () {
   'use strict';
   angular.bootstrap(document, ['app']);
 });

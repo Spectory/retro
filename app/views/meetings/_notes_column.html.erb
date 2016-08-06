@@ -1,1 +1,13 @@
-notes_colum
+<% notes.each do |note| %>
+  <div class="note-in-column panel <%= note.positive? ? "panel-success" : "panel-danger" %>">
+    <div class="panel-heading"><%= link_to note.title, note_path(note) %></div>
+    <div class="panel-footer">By: <%= note.create_by %></div>
+    <% if meeting %>
+      <%= link_to meeting_path(meeting, note: note), method: :patch do %>
+         <div class='reviewed-btn'>
+           Mark as reviewed <span class="glyphicon glyphicon-ok"></span>
+         </div>
+      <% end %>
+    <% end %>
+  </div>
+<%end %>

@@ -44,7 +44,6 @@ class NotesController < ApplicationController
     redirect_to notes_url
   end
 
-
   private
 
   def note_params

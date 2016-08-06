@@ -1,15 +1,19 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-3 column">
+      <h4>Previous Action Items</h4>
       <%= render partial: "action_items_column", locals: {action_items: @previous_action_items} %>
     </div>
-    <div class="col-sm-3">
-      <%= render partial: "notes_column", locals: {action_items: @previous_action_items} %>
+    <div class="col-sm-3 column">
+      <h4>New Notes</h4>
+      <%= render partial: "notes_column", locals: {notes: @new_notes, meeting: @meeting} %>
     </div>
-    <div class="col-sm-3">
-      <%= render partial: "notes_column", locals: {action_items: @previous_action_items} %>
+    <div class="col-sm-3 column">
+      <h4>Reviewd Notes</h4>
+      <%= render partial: "notes_column", locals: {notes: @reviewed_notes, meeting: nil} %>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-3 column">
+      <h4>New Action Items</h4>
       <%= render partial: "action_items_column", locals: {action_items: @new_action_items} %>
     </div>
   </div>
