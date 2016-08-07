@@ -2,10 +2,18 @@
   <div class="note-in-column panel <%= note.positive? ? "panel-success" : "panel-danger" %>">
     <div class="panel-heading"><%= link_to note.title, note_path(note) %></div>
     <div class="panel-footer">By: <%= note.create_by %></div>
-    <% if meeting %>
+    <% unless reviewed %>
       <%= link_to meeting_path(meeting, note: note), method: :patch do %>
          <div class='reviewed-btn'>
            Mark as reviewed <span class="glyphicon glyphicon-ok"></span>
+         </div>
+      <% end %>
+    <% end %>
+
+    <% if reviewed %>
+      <%= link_to new_action_item_path(meeting: meeting, note: note) do %>
+         <div class='reviewed-btn'>
+           Create action item <span class="glyphicon glyphicon-plus"></span>
          </div>
       <% end %>
     <% end %>
