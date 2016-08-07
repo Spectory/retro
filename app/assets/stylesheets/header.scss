@@ -21,7 +21,7 @@ header {
       .nav-btn {
         @extend %verticaly-aligned;
         justify-content: center;
-        border: 2px solid $main-backgound-color;
+        border: 2px solid #666547;
         margin: 5px;
       }
       a {

@@ -1,7 +1,8 @@
 @import "_colors";
 
 .column {
-  background-color: $secondery-backgound-color;
+  // background-color: $secondery-backgound-color;
+  border-right: 2px solid #666547;
   height: 80vh;
   width: calc(25% - 10px);
   margin: 2px;
@@ -12,4 +13,7 @@
     justify-content: space-around;
     text-decoration: underline;
   }
+}
+.column:first-child {
+  border-left: 2px solid #666547;
 }
