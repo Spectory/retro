@@ -22,31 +22,6 @@ body {
   font-weight: 300;
   padding: 1em;
 }
-
-.panel {
-}
-.panel-primary {
-  border-color: #7D7769;
-}
-.panel-primary>.panel-heading {
-  background-color: #7D7769;
-  border-color: #7D7769;
-}
-
-.panel-danger {
-  border-color: #F75E50;
-}
-.panel-danger>.panel-heading {
-  background-color: #F75E50;
-  border-color: #F75E50;
-  color: $main-text-color;
-}
-
-.panel-success {
-  border-color: $secondery-backgound-color;
-}
-.panel-success>.panel-heading {
-  background-color: $secondery-backgound-color;
-  border-color: $secondery-backgound-color;
-  color: $main-text-color;
+.main-view {
+  margin-top: 2%;
 }

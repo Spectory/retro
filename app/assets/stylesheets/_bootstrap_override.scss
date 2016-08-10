@@ -1,0 +1,54 @@
+@import "_colors";
+
+$primary: #7D7769;
+$primary-hover: #706a5d;
+$success: $secondery-backgound-color;
+$success-hover: #60b28a;
+$danger: #F75E50;
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+}
+.btn-primary:hover {
+  background-color: $primary-hover;
+}
+
+.btn-success {
+  background-color: $success;
+  border-color: $success;
+}
+.btn-success:hover {
+  background-color: $success-hover;
+}
+
+/****************** Panels *******************/
+.panel-footer {
+  background-color: #fff;
+}
+
+.panel-primary {
+  border-color: $primary;
+}
+.panel-primary>.panel-heading {
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.panel-danger {
+  border-color: $danger;
+}
+.panel-danger>.panel-heading {
+  background-color: $danger;
+  border-color: $danger;
+  color: $main-text-color;
+}
+
+.panel-success {
+  border-color: $success;
+}
+.panel-success>.panel-heading {
+  background-color: $success;
+  border-color: $success;
+  color: $main-text-color;
+}
