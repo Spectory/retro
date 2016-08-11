@@ -17,4 +17,8 @@
       <%= render partial: "action_items_column", locals: {action_items: @new_action_items} %>
     </div>
   </div>
+
+  <div class="row">
+    <%= button_to "Create Meeting", meetings_path, method: :post, class: 'btn btn-primary create-meeting-btn'%>
+  </div>
 </div>

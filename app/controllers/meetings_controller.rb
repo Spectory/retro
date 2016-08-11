@@ -1,4 +1,9 @@
 class MeetingsController < ApplicationController
+  def create
+    mid = Meeting.create!
+    redirect_to meeting_path(mid)
+  end
+
   def show
     last_meetings = Meeting.all.order(created_at: :desc).take(2)
     case last_meetings.count
