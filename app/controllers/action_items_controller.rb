@@ -20,6 +20,14 @@ class ActionItemsController < ApplicationController
     @action_item = ActionItem.find(params[:id])
   end
 
+  def index
+    @action_items = ActionItem.paginate(page: params[:page])
+  end
+
+  def edit
+    @note = ActionItem.find(params[:id])
+  end
+
   private
 
   def action_item_params

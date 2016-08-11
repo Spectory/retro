@@ -1,0 +1,21 @@
+<%= will_paginate %>
+
+<div class="container">
+  <table class="table table-responsive table-hover">
+    <thead>
+      <tr >
+        <th>Title</th>
+        <th>Body</th>
+        <th>Assigned To</th>
+        <th>-</th>
+        <th>-</th>
+     </tr>
+    </thead>
+    <tbody>
+      <%= render @action_items %>
+    </tbody>
+  </table>
+</div>
+
+<%= button_to "New", new_note_path, method: :get, class: 'btn btn-primary'%>
+<%= will_paginate %>
