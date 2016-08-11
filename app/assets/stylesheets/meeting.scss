@@ -1,27 +1,40 @@
 @import "_colors";
+@import "_placeholders";
 
-.column {
-  // background-color: $secondery-backgound-color;
-  border-right: 2px solid #666547;
-  height: 70vh;
-  width: calc(25% - 10px);
-  margin: 2px;
-  overflow-y: auto;
-  // opacity: .5;
-  h4 {
-    display: flex;
-    justify-content: space-around;
-    text-decoration: underline;
+.meeting-page {
+  display: flex;
+  justify-content: space-around;
+
+  .meeting-nav-btn {
+    @extend %verticaly-aligned;
+    flex: 1;
   }
-}
-.column:first-child {
-  border-left: 2px solid #666547;
-}
-.row:nth-child(2) {
-  margin-top: 2%;
-  border-top: 2px solid #666547;
-}
-.create-meeting-btn {
-  float: right;
-  margin: 1%;
+  .meeting-table {
+    flex: 10;
+  }
+  .column {
+    // background-color: $secondery-backgound-color;
+    border-right: 2px solid #666547;
+    height: 70vh;
+    width: calc(25% - 10px);
+    margin: 2px;
+    overflow-y: auto;
+    // opacity: .5;
+    h4 {
+      display: flex;
+      justify-content: space-around;
+      text-decoration: underline;
+    }
+  }
+  .column:first-child {
+    border-left: 2px solid #666547;
+  }
+  .row:nth-child(2) {
+    margin-top: 2%;
+    border-top: 2px solid #666547;
+  }
+  .create-meeting-btn {
+    float: right;
+    margin: 1%;
+  }
 }
