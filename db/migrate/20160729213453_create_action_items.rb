@@ -6,6 +6,8 @@ class CreateActionItems < ActiveRecord::Migration[5.0]
       t.text    :body
       t.string  :assigned_to
       t.belongs_to :meeting
+      t.belongs_to :note
+      t.belongs_to :action_item
       t.timestamps
     end
   end

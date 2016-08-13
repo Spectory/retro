@@ -17,12 +17,17 @@ ActiveRecord::Schema.define(version: 20160730065340) do
 
   create_table "action_items", force: :cascade do |t|
     t.string   "title"
+    t.integer  "action_type"
     t.text     "body"
     t.string   "assigned_to"
     t.integer  "meeting_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "note_id"
+    t.integer  "action_item_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["action_item_id"], name: "index_action_items_on_action_item_id", using: :btree
     t.index ["meeting_id"], name: "index_action_items_on_meeting_id", using: :btree
+    t.index ["note_id"], name: "index_action_items_on_note_id", using: :btree
   end
 
   create_table "meetings", force: :cascade do |t|
