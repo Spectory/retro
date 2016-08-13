@@ -4,12 +4,15 @@
 @import "_colors";
 
 .delete-btn, .delete-btn:hover, .delete-btn:visited {
-  text-decoration: none;
   color: #d63131;
 }
-.edit-btn {
+
+a, a:hover, a:visited {
   text-decoration: none;
-  color: $main-text-color;
+  color: inherit;
+}
+a:hover {
+  font-weight: bold;
 }
 
 .note-in-column {
