@@ -1,37 +1,44 @@
-
+<div>
+  <h3>Meeting of <%= @meeting.created_at.to_date%></h3>
+</div>
 <div class="container meeting-page">
   <div class="meeting-nav-btn">
     <% if @previouse_meeting %>
-      <%= @previouse_meeting.id %>
-      <%= button_to "Previouse Meeting", meeting_path(@previouse_meeting), method: :get, class: 'btn btn-primary create-meeting-btn'%>
+      <%= link_to meeting_path(@previouse_meeting), method: :get do %>
+          <span class='arrow'>&#8249;</span>
+      <% end %>
+      <!-- <%= button_to "Previouse Meeting", meeting_path(@previouse_meeting), method: :get, class: 'btn btn-primary create-meeting-btn'%> -->
     <% end %>
   </div>
 
   <div class="meeting-table">
-    <div class="col-sm-3 column">
+    <div class="col-sm-3 column column-bordered">
       <h4>Previous Action Items</h4>
       <%= render partial: "action_items_column", locals: {action_items: @previous_action_items} %>
     </div>
     <div class="col-sm-3 column">
-      <h4>New Notes</h4>
+      <h4>For Discussion</h4>
       <%= render partial: "notes_column", locals: {notes: @new_notes, meeting: @meeting, reviewed: false} %>
     </div>
     <div class="col-sm-3 column">
-      <h4>Reviewed Notes</h4>
+      <h4>Discussed</h4>
       <%= render partial: "notes_column", locals: {notes: @reviewed_notes, meeting: @meeting, reviewed: true} %>
     </div>
-    <div class="col-sm-3 column">
+    <div class="col-sm-3 column column-bordered">
       <h4>New Action Items</h4>
       <%= render partial: "action_items_column", locals: {action_items: @new_action_items} %>
     </div>
   </div>
 
-  <div class="meeting-nav-btn">
+  <div class="meeting-nav-btn a-overide">
     <% if @next_meeting %>
-      <%= @next_meeting.id %>
-      <%= button_to "Next Meeting", meeting_path(@next_meeting), method: :get, class: 'btn btn-primary create-meeting-btn'%>
+      <%= link_to meeting_path(@next_meeting), method: :get do %>
+        <span class='arrow'>&#8250;</span>
+      <% end %>
     <% else %>
-      <%= button_to "Create Meeting", meetings_path, method: :post, class: 'btn btn-primary create-meeting-btn'%>
+      <%= link_to  meetings_path, method: :post, data: {confirm: "This will create an new meeting.\nAre you sure?"} do %>
+        <span class='arrow'>&#43;</span>
+      <% end %>
     <% end %>
   </div>
 </div>
