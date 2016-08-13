@@ -45,6 +45,7 @@ GEM
     bootstrap-will_paginate (0.0.10)
       will_paginate
     builder (3.2.2)
+    byebug (9.0.5)
     capybara (2.7.1)
       addressable
       mime-types (>= 1.16)
@@ -272,6 +273,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   bootstrap-will_paginate
+  byebug
   capybara
   colorize
   database_cleaner

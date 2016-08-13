@@ -1,7 +1,10 @@
 
 <div class="container meeting-page">
   <div class="meeting-nav-btn">
-    <%= button_to "Previous Meeting", meetings_path, method: :post, class: 'btn btn-primary create-meeting-btn'%>
+    <% if @previouse_meeting %>
+      <%= @previouse_meeting.id %>
+      <%= button_to "Previouse Meeting", meeting_path(@previouse_meeting), method: :get, class: 'btn btn-primary create-meeting-btn'%>
+    <% end %>
   </div>
 
   <div class="meeting-table">
@@ -24,6 +27,11 @@
   </div>
 
   <div class="meeting-nav-btn">
-    <%= button_to "Create Meeting", meetings_path, method: :post, class: 'btn btn-primary create-meeting-btn'%>
+    <% if @next_meeting %>
+      <%= @next_meeting.id %>
+      <%= button_to "Next Meeting", meeting_path(@next_meeting), method: :get, class: 'btn btn-primary create-meeting-btn'%>
+    <% else %>
+      <%= button_to "Create Meeting", meetings_path, method: :post, class: 'btn btn-primary create-meeting-btn'%>
+    <% end %>
   </div>
 </div>
