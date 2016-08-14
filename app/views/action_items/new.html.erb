@@ -21,12 +21,12 @@
           <%= f.hidden_field :meeting_id, :value => @action_item.meeting_id%>
           <%= f.hidden_field :note_id, :value => @action_item.note_id%>
           <div class="form-group">
-            <%= f.submit 'Create Action Item', class: 'btn btn-large btn-success' %>
-          </div>
-          <div class="form-group">
             <%= f.collection_radio_buttons(:action_type, ActionItem.action_types, :first, :first) do |b|
               b.label(:class => 'radio-inline') { b.radio_button(:checked => @action_item[:action_type], :onchange => 'ptype_set(value)') + b.text }
-        end %>
+            end %>
+            <div class="form-group">
+              <%= f.submit 'Create Action Item', class: 'btn btn-large btn-success' %>
+            </div>
         <% end %>
       </div>
     </div>

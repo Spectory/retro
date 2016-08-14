@@ -1,7 +1,12 @@
 <div class='row main-page-with-margin'>
   <div class="action_item-in-column panel panel-primary">
-    <div class="panel-heading"><%= @action_item.title %></div>
-    <div class="panel-body"><%= @action_item.body %></div>
+    <div class="panel-heading">
+      <span><%= @action_item.action_type %>: </span>
+      <span><%= @action_item.title %></span>
+    </div>
+    <div class="panel-body">
+      <div><%= @action_item.body %></div>
+    </div>
     <div class="panel-footer">Assigned To: <%= @action_item.assigned_to %></div>
   </div>
 </div>

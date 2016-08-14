@@ -28,9 +28,15 @@ class ActionItemsController < ApplicationController
     @note = ActionItem.find(params[:id])
   end
 
+  def destroy
+    ActionItem.find(params[:id]).destroy
+    flash[:success] = "note destroyed."
+    redirect_to action_items_url
+  end
+
   private
 
   def action_item_params
-    params.require(:action_item).permit(:assigned_to, :title, :body, :meeting_id, :note_id)
+    params.require(:action_item).permit(:assigned_to, :title, :body, :action_type, :meeting_id, :note_id)
   end
 end

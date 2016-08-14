@@ -5,7 +5,7 @@
       <div>
         Assigned To: <%= action_item.assigned_to %>
       </div>
-      <%= link_to new_action_item_path(meeting: Meeting.last) do %>
+      <%= link_to new_action_item_path(meeting: Meeting.last, note: action_item.note) do %>
          <div class='reviewed-btn'>
            Create follow up item <span class="glyphicon glyphicon-plus"></span>
          </div>
