@@ -11,6 +11,7 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'jquery-rails'
 gem 'pg'
+gem 'devise'
 # gem 'turbolinks'  * use only with round trip apps. single page apps dont need that.
 # gem 'aws-sdk'     * amazon access
 # gem 'clockwork'   * if you need to schedule tasks with less the 10 min intervals

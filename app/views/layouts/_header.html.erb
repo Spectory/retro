@@ -2,11 +2,14 @@
   <div class='header-container'>
     <%= link_to 'Retro-Spec', root_path, class: 'header-title' %>
 
-    <nav>
-      <div class='nav-btn'> <%= link_to "Notes", notes_path %> </div>
-      <div class='nav-btn'> <%= link_to "Meetings", root_path %> </div>
-      <div class='nav-btn'> <%= link_to "Action Items", action_items_path %> </div>
-    </nav>
+    <% if user_signed_in? %>
+      <nav>
+        <div class='nav-btn'> <%= link_to "Notes", notes_path %> </div>
+        <div class='nav-btn'> <%= link_to "Meetings", root_path %> </div>
+        <div class='nav-btn'> <%= link_to "Action Items", action_items_path %> </div>
+        <div class='nav-btn'> <%= link_to "Sign Out", destroy_user_session_path, method: :delete %> </div>
+      </nav>
+    <% end %>
   </div>
   <%= image_tag('logo.png', class: "logo") %>
 </header>
