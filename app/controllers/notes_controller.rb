@@ -7,7 +7,6 @@ class NotesController < ApplicationController
     np = note_params
     ap np
     @note = Note.new(note_params)
-    ap @note
     if @note.save!
       flash[:success] = 'Note Created!'
       redirect_to notes_path
