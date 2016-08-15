@@ -5,9 +5,7 @@ class ActionItemsController < ApplicationController
 
   def create
     aip = action_item_params
-    ap aip
     @ai = ActionItem.new(aip)
-    ap @ai
     if @ai.save!
       flash[:success] = 'Action Item Created!'
       redirect_to meeting_path(aip[:meeting_id])

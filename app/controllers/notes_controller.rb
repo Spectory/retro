@@ -5,7 +5,6 @@ class NotesController < ApplicationController
 
   def create
     np = note_params
-    ap np
     @note = Note.new(note_params)
     if @note.save!
       flash[:success] = 'Note Created!'
