@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :authenticate_user!
+  rescue_from StandardError, with: :show_error
 
   def robots
     user_agents = '*'
@@ -15,5 +16,10 @@ class ApplicationController < ActionController::Base
       ].join("\n")
     end
     render text: res, layout: false, content_type: 'text/plain'
+  end
+
+  def show_error(exception)
+    flash[:danger] = exception.message
+    redirect_to :back
   end
 end
