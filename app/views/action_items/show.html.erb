@@ -1,12 +1,17 @@
-<div class='row main-page-with-margin'>
+<div class='row main-page-with-margin action-item'>
   <div class="action_item-in-column panel panel-primary">
     <div class="panel-heading">
       <span><%= @action_item.action_type %>: </span>
       <span><%= @action_item.title %></span>
+      <%= link_to note_path(@action_item.note) do %>
+      <span class="glyphicon glyphicon-file note-icon"></span>
+      <% end %>
     </div>
     <div class="panel-body">
       <div><%= @action_item.body %></div>
     </div>
-    <div class="panel-footer">Assigned To: <%= @action_item.assigned_to %></div>
+    <div class="panel-footer">
+      <div>Assigned To: <%= @action_item.assigned_to %></div>
+    </div>
   </div>
 </div>
