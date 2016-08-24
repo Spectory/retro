@@ -1,7 +1,7 @@
 <div class='row main-page-with-margin'>
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h3 class="panel-title">New Action Item</h3>
+      <h3 class="panel-title">Edit Action Item</h3>
     </div>
     <div class="panel-body">
       <div class='span6 offset3'>
@@ -12,26 +12,22 @@
           </div>
           <div class="form-group">
             <%= f.label :body %>
-            <%= f.text_area :body, class: 'form-control' %>
+            <%= f.text_field :body, class: 'form-control' %>
           </div>
           <div class="form-group">
             <%= f.label :assigned_to %>
             <%= f.text_field :assigned_to, class: 'form-control' %>
           </div>
-          <%= f.hidden_field :meeting_id, :value => @action_item.meeting_id%>
-          <%= f.hidden_field :note_id, :value => @action_item.note_id%>
           <div class="form-group">
             <%= f.collection_radio_buttons(:action_type, ActionItem.action_types, :first, :first) do |b|
               b.label(:class => 'radio-inline') { b.radio_button(:checked => @action_item[:action_type], :onchange => 'ptype_set(value)') + b.text }
             end %>
           </div>
           <div class="form-group">
-            <%= f.submit 'Create Action Item', class: 'btn btn-large btn-success' %>
+            <%= f.submit 'Save Changes', class: 'btn btn-large btn-success' %>
           </div>
         <% end %>
       </div>
     </div>
   </div>
-
-
 </div>

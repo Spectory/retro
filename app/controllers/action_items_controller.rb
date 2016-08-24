@@ -23,7 +23,17 @@ class ActionItemsController < ApplicationController
   end
 
   def edit
-    @note = ActionItem.find(params[:id])
+    @action_item = ActionItem.find(params[:id])
+  end
+
+  def update
+    @action_item = ActionItem.find(params[:id])
+    if @action_item.update_attributes!(action_item_params)
+      flash[:success] = 'Action item updated'
+      redirect_to action_items_path
+    else
+      render 'edit'
+    end
   end
 
   def destroy

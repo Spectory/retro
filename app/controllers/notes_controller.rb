@@ -28,7 +28,7 @@ class NotesController < ApplicationController
 
   def update
     @note = Note.find(params[:id])
-    if @note.update_attributes(note_params)
+    if @note.update_attributes!(note_params)
       flash[:success] = "note updated"
       redirect_to notes_path
     else
