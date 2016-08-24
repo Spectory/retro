@@ -19,6 +19,7 @@ class ApplicationController < ActionController::Base
   end
 
   def show_error(exception)
+    ap exception.backtrace
     flash[:danger] = exception.message
     redirect_to :back
   end
