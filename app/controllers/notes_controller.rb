@@ -19,7 +19,7 @@ class NotesController < ApplicationController
   end
 
   def index
-    @notes = Note.paginate(page: params[:page])
+    @notes = Note.paginate(page: params[:page], per_page: 10).order('created_at DESC')
   end
 
   def edit

@@ -1,0 +1,26 @@
+@import "_bootstrap_override";
+
+.pagination {
+  // background-co: red;
+  // width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-top: 1%;
+  ul { margin: auto; }
+  li > a {
+    color: $main-text-color;
+    &:hover { color: $main-text-color; }
+  }
+  .active {
+    a {
+      background-color: $primary;
+      border-color: $primary;
+      &:hover {
+        background-color: $primary;
+        border-color: $primary;
+      }
+    }
+  }
+}

@@ -19,7 +19,7 @@ class ActionItemsController < ApplicationController
   end
 
   def index
-    @action_items = ActionItem.paginate(page: params[:page])
+    @action_items = ActionItem.paginate(page: params[:page], per_page: 10).order('created_at DESC')
   end
 
   def edit
