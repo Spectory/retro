@@ -2,21 +2,20 @@
 @import "_colors";
 
 .login {
-  // display: flex;
-  // justify-content: space-around;
-  // align-items: flex-start;
-  color: $spectory-orange;
+  background-image: url("bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   padding: 10% 1%;
-  height: 500px;
+  min-height: 100%;
+  display: flex;
   .title {
+    padding-left: 3%;
     font-family: $retro-font;
     font-size: 420%;
-    float: left;
     width: 45%;
   }
   .login-form {
     width: 55%;
-    float: right;
     margin-top: 16px;
     padding: 0 16% 0 4%;
   }

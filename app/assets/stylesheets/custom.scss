@@ -9,29 +9,16 @@
 $main-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $retro-font: "retro", sans-serif;
 
-html {
-  overflow-y: scroll;
-  width: 100%;
+html, body {
+  margin: 0;
   height: 100%;
 }
+.main-wrapper {
+  margin: 0;
+  height: 100%;
+  color: $spectory-orange;
+}
 
-body {
-  background-image: url("bg.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  padding-top: 60px;
-  background-color: $main-backgound-color;
-  color: $main-text-color;
-  line-height: 1.5;
-  font-family: $main-font;
-  font-weight: 300;
-  padding: 1em;
-}
-.main-view {
-  width: 100%;
-}
-.main-page-with-margin {
-  width: 90%;
-  margin: auto;
-  margin-top: 2%;
+.logged-in {
+  background: linear-gradient(#FFFEFC, #FCD19E);
 }
