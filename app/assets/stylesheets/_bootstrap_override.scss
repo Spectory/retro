@@ -1,10 +1,10 @@
 @import "_colors";
 
-$primary: #7D7769;
+$primary: #871D03;
 $primary-hover: #706a5d;
-$success: $secondery-backgound-color;
-$success-hover: #60b28a;
-$danger: #F75E50;
+$success: $orange;
+$success-hover: $light-orange;
+$danger: #C74829;
 
 .btn-primary {
   background-color: $primary;
