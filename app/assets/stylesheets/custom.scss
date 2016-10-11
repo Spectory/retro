@@ -1,4 +1,5 @@
-@import "colors";
+@import "_colors";
+@import "_sizes";
 
 
 @font-face {
@@ -20,5 +21,14 @@ html, body {
 }
 
 .logged-in {
+  height: 100%;
   background: linear-gradient(#FFFEFC, #FCD19E);
+}
+
+footer {
+  color: $main-text-color;
+  position: absolute;
+  bottom: 0;
+  height: $footer-height;
+  padding: 0 0 0 5px;
 }
