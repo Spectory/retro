@@ -10,10 +10,17 @@ class MeetingsController < ApplicationController
     else
       load_recent
     end
-    @new_notes = Note.where(meeting: nil)
-    @reviewed_notes = Note.where(meeting: @meeting)
-    @previous_action_items = ActionItem.where(meeting: @previouse_meeting)
-    @new_action_items = ActionItem.where(meeting: @meeting)
+    @selected = params[:selected] || 'previous_action_items'
+    case @selected
+    when 'new_notes'
+      @new_notes = Note.where(meeting: nil)
+    when 'reviewed_notes'
+      @reviewed_notes = Note.where(meeting: @meeting)
+    when 'previous_action_items'
+      @previous_action_items = ActionItem.where(meeting: @previouse_meeting)
+    when 'new_action_items'
+      @new_action_items = ActionItem.where(meeting: @meeting)
+    end
   end
 
   def update

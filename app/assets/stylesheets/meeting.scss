@@ -20,11 +20,13 @@
     font-size: 150%;
     box-sizing: border-box;
     &:hover {
-      // background-color: $orange;
-      font-weight: bold;
-      border: 2px solid;
-      margin: calc(1% - 1px);
+      background-color: $orange;
     }
+  }
+  .selected {
+    font-weight: bold;
+    border: 3px solid;
+    margin: calc(1% - 1px);
   }
   .seperator {
     display: flex;
