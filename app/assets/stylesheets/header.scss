@@ -1,11 +1,10 @@
 @import "_colors";
+@import "_sizes";
 @import "_placeholders";
 @import "custom";
 
 header {
   $logo-width: 50px;
-  $header-height: 100px;
-
   // background-color: $secondery-backgound-color;
   height: $header-height;
   padding: 5px;

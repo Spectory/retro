@@ -1,56 +1,94 @@
 @import "_colors";
 @import "_placeholders";
+@import "_sizes";
 
-.meeting-page {
+.meeting-tab {
   display: flex;
-  justify-content: space-around;
-  width: 96%;
+  margin: 0 1%;
+  height: calc(100% - #{$header-height});
 
-  h3 {
-    margin-top: 0;
+  .left-sidebar {
+    width: $left-sidebar-width;
+    display: flex;
+    flex-direction: column;
   }
-  .meeting-nav-btn {
-    @extend %verticaly-aligned;
+  .sidebar-btn {
+    background-color: $light-orange;
+    border: 1px solid;
     margin: 1%;
-    .arrow {
-      font-size: 500%;
-    }
-    .date {
-      display: inline-block;
-      position: relative;
-      bottom: 13px;
-    }
-    a {
-      color: $main-text-color;
-      text-decoration: none;
-    }
-    a:hover {
+    text-align: center;
+    font-size: 150%;
+    box-sizing: border-box;
+    &:hover {
+      // background-color: $orange;
       font-weight: bold;
-      text-decoration: none;
+      border: 2px solid;
+      margin: calc(1% - 1px);
     }
   }
-  .meeting-table {
-    flex: 10;
+  .seperator {
+    display: flex;
+    justify-content: center;
+    // color: $brown;
+    font-size: 150%;
   }
-  .column {
-    // background-color: $secondery-backgound-color;
-    height: 70vh;
-    width: calc(25% - 4px);
-    margin: 2px;
-    overflow-y: auto;
-    // opacity: .5;
-    h4 {
-      display: flex;
-      justify-content: space-around;
-      text-decoration: underline;
-    }
-  }
-  .column-bordered {
-    border-left: 1px solid $main-text-color;
-    border-right: 1px solid $main-text-color;
-  }
-  .create-meeting-btn {
-    float: right;
-    margin: 1%;
+
+  .main-view {
+    width: calc(100% - #{$left-sidebar-width});
+    background-color: blue;
   }
 }
+
+// .meeting-page {
+//   display: flex;
+//   justify-content: space-around;
+//   width: 96%;
+//
+//   h3 {
+//     margin-top: 0;
+//   }
+//   .meeting-nav-btn {
+//     @extend %verticaly-aligned;
+//     margin: 1%;
+//     .arrow {
+//       font-size: 500%;
+//     }
+//     .date {
+//       display: inline-block;
+//       position: relative;
+//       bottom: 13px;
+//     }
+//     a {
+//       color: $main-text-color;
+//       text-decoration: none;
+//     }
+//     a:hover {
+//       font-weight: bold;
+//       text-decoration: none;
+//     }
+//   }
+//   .meeting-table {
+//     flex: 10;
+//   }
+//   .column {
+//     // background-color: $secondery-backgound-color;
+//     height: 70vh;
+//     width: calc(25% - 4px);
+//     margin: 2px;
+//     overflow-y: auto;
+//     // opacity: .5;
+//     h4 {
+//       display: flex;
+//       justify-content: space-around;
+//       text-decoration: underline;
+//     }
+//   }
+//   .column-bordered {
+//     border-left: 1px solid $main-text-color;
+//     border-right: 1px solid $main-text-color;
+//   }
+//   .create-meeting-btn {
+//     float: right;
+//     margin: 1%;
+//   }
+// }
