@@ -12,9 +12,8 @@ class MeetingsController < ApplicationController
     end
     @selected = params[:selected] || 'previous_action_items'
     case @selected
-    when 'new_notes'
+    when 'discussion'
       @new_notes = Note.where(meeting: nil)
-    when 'reviewed_notes'
       @reviewed_notes = Note.where(meeting: @meeting)
     when 'previous_action_items'
       @previous_action_items = ActionItem.where(meeting: @previouse_meeting)

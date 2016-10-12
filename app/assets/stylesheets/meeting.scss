@@ -31,7 +31,6 @@
   .seperator {
     display: flex;
     justify-content: center;
-    // color: $brown;
     font-size: 150%;
   }
 
@@ -43,6 +42,11 @@
     overflow-y: auto;
     .panel {
       width: 85%;
+    }
+    .notes-seperator {
+      height: 30px;
+      font-size: 130%;
+      text-decoration: underline;
     }
   }
   .empty-view-title {

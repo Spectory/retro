@@ -8,13 +8,8 @@
     </div>
     <div class='seperator'><span class="glyphicon glyphicon-triangle-bottom"></span></div>
 
-    <div class="<%= @selected == 'new_notes' ? 'sidebar-btn selected' : 'sidebar-btn' %>">
-      <%= link_to 'For Discussion', meeting_path(@meeting, selected: 'new_notes'), method: :get %>
-    </div>
-    <div class='seperator'><span class="glyphicon glyphicon-triangle-bottom"></span></div>
-
-    <div class="<%= @selected == 'reviewed_notes' ? 'sidebar-btn selected' : 'sidebar-btn' %>">
-      <%= link_to 'Discussed', meeting_path(@meeting, selected: 'reviewed_notes'), method: :get%>
+    <div class="<%= @selected == 'discussion' ? 'sidebar-btn selected' : 'sidebar-btn' %>">
+      <%= link_to 'Discussion', meeting_path(@meeting, selected: 'discussion'), method: :get %>
     </div>
     <div class='seperator'><span class="glyphicon glyphicon-triangle-bottom"></span></div>
 
@@ -27,12 +22,21 @@
     <% if @selected == 'previous_action_items' %>
       <%= render partial: "action_items_column", locals: {action_items: @previous_action_items} %>
     <% end %>
-    <% if @selected == 'new_notes' %>
+
+    <% if @selected == 'discussion' %>
+      <% if @new_notes.empty? && @reviewed_notes.empty? %>
+        <div class='empty-view-title'>No Notes...</div>
+      <% end %>
+      <div class='notes-seperator'>
+        <% unless @new_notes.empty? %> <span>New Notes</span> <% end %>
+      </div>
       <%= render partial: "notes_column", locals: {notes: @new_notes, meeting: @meeting, reviewed: false} %>
-    <% end %>
-    <% if @selected == 'reviewed_notes' %>
+      <div class='notes-seperator'>
+        <% unless @reviewed_notes.empty? %> <span>Reviewed Notes</span> <% end %>
+      </div>
       <%= render partial: "notes_column", locals: {notes: @reviewed_notes, meeting: @meeting, reviewed: true} %>
     <% end %>
+
     <% if @selected == 'new_action_items' %>
       <%= render partial: "action_items_column", locals: {action_items: @new_action_items} %>
     <% end %>

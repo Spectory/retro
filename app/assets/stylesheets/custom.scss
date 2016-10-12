@@ -14,6 +14,14 @@ html, body {
   margin: 0;
   height: 100%;
 }
+body a {
+  color: $brown;
+  &:hover {
+    text-decoration: none;
+    color: $brown;
+  }
+}
+
 .main-wrapper {
   margin: 0;
   height: 100%;
@@ -41,4 +49,12 @@ table {
 table th, table td {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+th, td {
+  text-align: center;
+}
+
+.td-left {
+  text-align: left;
 }

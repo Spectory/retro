@@ -22,20 +22,22 @@ header {
         justify-content: center;
         border: 2px solid #666547;
         margin: 5px;
+        height: 60px;
+        &:hover {
+          border: 3px solid #666547;
+          margin: 4px;
+        }
       }
       a {
-        color: $spectory-orange;
-        text-decoration: none;
+        color: $orange;
         padding: 25px;
-      }
-      a:hover {
-        font-weight: bold;
+        font-size: 120%;
       }
     }
 
     .header-title {
       @extend %verticaly-aligned;
-      color: $spectory-orange;
+      color: $orange;
       text-decoration: none;
       font-family: $retro-font;
       height: 100%;

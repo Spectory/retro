@@ -1,7 +1,7 @@
 <tr>
-  <td><%= action_item.title %></td>
-  <td><%= action_item.body %></td>
-  <td><%= action_item.assigned_to %></td>
+  <td class='td-left'><%= action_item.title %></td>
+  <td class='td-left'><%= action_item.body %></td>
+  <td class='td-left'><%= action_item.assigned_to %></td>
   <td>
     <%= link_to note_path(action_item.note_id) do %>
       <span class="glyphicon glyphicon-file"></span>

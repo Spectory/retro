@@ -1,25 +1,29 @@
 @import "_colors";
 
-$primary: #871D03;
-$primary-hover: #706a5d;
+$primary: $brown;
+$primary-hover: $light-brown;
 $success: $orange;
 $success-hover: $light-orange;
 $danger: #C74829;
 
 .btn-primary {
-  background-color: $primary;
-  border-color: $primary;
-}
-.btn-primary:hover {
-  background-color: $primary-hover;
+  background-color: $brown;
+  border-color: $brown;
+  &:hover, &:active, &:focus {
+    border-color: $light-brown !important;
+    background-color: $light-brown !important;
+    outline-color: $light-brown !important;
+  }
 }
 
 .btn-success {
-  background-color: $success;
-  border-color: $success;
-}
-.btn-success:hover {
-  background-color: $success-hover;
+  border-color: $orange;
+  background-color: $orange;
+  &:hover, &:active, &:focus {
+    border-color: $light-orange !important;
+    background-color: $light-orange !important;
+    outline-color: $light-orange !important;
+  }
 }
 
 /****************** Panels *******************/
@@ -32,11 +36,11 @@ $danger: #C74829;
 }
 
 .panel-primary {
-  border-color: $primary;
+  border-color: $brown;
 }
 .panel-primary>.panel-heading {
-  background-color: $primary;
-  border-color: $primary;
+  background-color: $brown;
+  border-color: $brown;
 }
 
 .panel-danger {
