@@ -27,10 +27,12 @@ html, body {
 
 footer {
   color: $main-text-color;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   height: $footer-height;
-  padding: 0 0 0 5px;
+  width: 100%;
+  padding: 0 5px;
+  z-index: 999;
 }
 
 table {
