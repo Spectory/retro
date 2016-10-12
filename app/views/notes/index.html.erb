@@ -1,17 +1,16 @@
-<% provide(:title, 'Notes') %>
-
-
+<div class='notes-tab'>
 <%= will_paginate %>
 
 <div class="container main-page-with-margin">
   <table class="table table-responsive table-hover">
     <thead>
-      <tr >
-        <th>Title</th>
-        <th>Body</th>
-        <th>Created By</th>
-        <th>View</th>
-        <th>Delete</th>
+      <tr>
+        <th class='col-md-1'>Title</th>
+        <th class='col-md-7'>Body</th>
+        <th class='col-md-1'>Created By</th>
+        <th class='col-md-1'>View</th>
+        <th class='col-md-1'>Edit</th>
+        <th class='col-md-1'>Delete</th>
      </tr>
     </thead>
     <tbody>
@@ -22,3 +21,4 @@
 </div>
 
 <%= will_paginate %>
+</div>

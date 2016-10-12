@@ -1,33 +1,9 @@
-// Place all the styles related to the notes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 @import "_colors";
-
-.delete-btn, .delete-btn:hover, .delete-btn:visited {
-  color: #d63131;
-}
-
-a, a:hover, a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-a:hover {
-  font-weight: bold;
-}
-
-.note-in-column {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  a:hover {
-    font-weight: bold;
-  }
-  .reviewed-btn {
-    float: right;
-    margin-right: 2%;
+@import "_sizes";
+@import "_placeholders";
+.notes-tab {
+  @extend %tab;
+  .panel {
+    margin-top: $pagination-heigth;
   }
 }

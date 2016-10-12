@@ -55,10 +55,17 @@
     justify-content: space-around;
     font-size: 150%;
     margin-bottom: 1%;
+    .nab-btn:hover {
+      font-weight: bold;
+    }
+    .disabled {
+      opacity: .3;
+    }
   }
 
-  .disabled {
-    opacity: .3;
+  .panel-footer {
+    display: flex;
+    justify-content: space-between;
   }
 }
 

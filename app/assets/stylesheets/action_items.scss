@@ -1,9 +1,9 @@
-// Place all the styles related to the ActionItems controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.action-item {
-  .note-icon {
-    float: right;
+@import "_colors";
+@import "_sizes";
+@import "_placeholders";
+.action-items-tab {
+  @extend %tab;
+  .panel {
+    margin-top: $pagination-heigth;
   }
 }
