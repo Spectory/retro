@@ -1,0 +1,21 @@
+<div class='meeting-tab-nav'>
+  <% if @previouse_meeting %>
+    <%= link_to meeting_path(@previouse_meeting), method: :get do %>
+        <span	class='glyphicon glyphicon-triangle-left'></span>
+    <% end %>
+  <% else %>
+    <span	class='glyphicon glyphicon-triangle-left disabled'></span>
+  <% end %>
+
+  <%= @meeting.created_at.to_date %>
+
+  <% if @next_meeting %>
+    <%= link_to meeting_path(@next_meeting), method: :get do %>
+      <span class='glyphicon glyphicon-triangle-right'></span>
+    <% end %>
+  <% else %>
+    <%= link_to  meetings_path, method: :post, data: {confirm: "This will create an new meeting.\nAre you sure?"} do %>
+      <span class='glyphicon glyphicon-plus'></span>
+    <% end %>
+  <% end %>
+</div>

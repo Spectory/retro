@@ -45,6 +45,21 @@
       width: 85%;
     }
   }
+  .empty-view-title {
+    width: 85%;
+    font-size: 150%;
+  }
+
+  .meeting-tab-nav {
+    display: flex;
+    justify-content: space-around;
+    font-size: 150%;
+    margin-bottom: 1%;
+  }
+
+  .disabled {
+    opacity: .3;
+  }
 }
 
 // .meeting-page {

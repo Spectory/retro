@@ -1,5 +1,8 @@
 <div class='meeting-tab'>
   <div class='left-sidebar'>
+
+    <%= render partial: "meeting_tab_nav", locals: {meeting: @meeting, previouse_meeting: @previouse_meeting, next_meeting: @next_meeting} %>
+
     <div class="<%= @selected == 'previous_action_items' ? 'sidebar-btn selected' : 'sidebar-btn' %>">
       <%= link_to 'Last Action Items', meeting_path(@meeting, selected: 'previous_action_items'), method: :get %>
     </div>
@@ -21,16 +24,16 @@
   </div>
 
   <div class='main-view'>
-    <% if @previous_action_items %>
+    <% if @selected == 'previous_action_items' %>
       <%= render partial: "action_items_column", locals: {action_items: @previous_action_items} %>
     <% end %>
-    <% if @new_notes %>
+    <% if @selected == 'new_notes' %>
       <%= render partial: "notes_column", locals: {notes: @new_notes, meeting: @meeting, reviewed: false} %>
     <% end %>
-    <% if @previous_action_items %>
-      <%= render partial: "notes_column", locals: {notes: @previous_action_items, meeting: @meeting, reviewed: true} %>
+    <% if @selected == 'reviewed_notes' %>
+      <%= render partial: "notes_column", locals: {notes: @reviewed_notes, meeting: @meeting, reviewed: true} %>
     <% end %>
-    <% if @new_action_items %>
+    <% if @selected == 'new_action_items' %>
       <%= render partial: "action_items_column", locals: {action_items: @new_action_items} %>
     <% end %>
   </div>

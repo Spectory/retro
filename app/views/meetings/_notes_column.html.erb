@@ -1,3 +1,6 @@
+<% if notes.empty? %>
+  <div class='empty-view-title'>No Notes...</div>
+<% end %>
 <% notes.each do |note| %>
   <div class="panel <%= note.positive? ? "panel-success" : "panel-danger" %>">
     <div class="panel-heading"><%= note.title %></div>
