@@ -1,7 +1,9 @@
 <div class='notes-tab'>
-<%= will_paginate %>
+  <div class='pagination-wrapper'>
+    <%= will_paginate %>
+    <%= button_to "New", new_note_path, method: :get, class: 'btn btn-primary'%>
+  </div>
 
-<div class="container main-page-with-margin">
   <table class="table table-responsive table-hover">
     <thead>
       <tr>
@@ -17,8 +19,5 @@
       <%= render @notes %>
     </tbody>
   </table>
-  <%= button_to "New", new_note_path, method: :get, class: 'btn btn-primary'%>
-</div>
 
-<%= will_paginate %>
 </div>

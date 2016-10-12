@@ -1,11 +1,15 @@
 @import "_bootstrap_override";
 
+.pagination-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .pagination {
   margin: 0;
   padding: 0;
-  display: flex;
-  align-items: center;
-  margin-top: 1%;
+  // display: flex;
+  // justify-content: space-between;
   ul { margin: auto; }
   li > a {
     color: $main-text-color;
