@@ -16,7 +16,8 @@
       </div>
       <%= link_to new_action_item_path(meeting: Meeting.last, note: action_item.note) do %>
          <div class='reviewed-btn'>
-           Create follow up item <span class="glyphicon glyphicon-plus"></span>
+           <span class="glyphicon glyphicon-plus"></span>
+           <span>Create follow up item</span>
          </div>
       <% end %>
     </div>

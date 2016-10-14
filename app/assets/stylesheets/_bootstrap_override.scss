@@ -27,6 +27,9 @@ $danger: #C74829;
 }
 
 /****************** Panels *******************/
+.panel-body, .panel-heading {
+  font-size: 200%;
+}
 .panel-body {
   white-space: normal;
 }
