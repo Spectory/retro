@@ -67,6 +67,15 @@
     }
   }
 
+  .panel-heading {
+    display: flex;
+    justify-content: space-between;
+    .glyphicon {
+      display: flex;
+      align-items: center;
+    }
+  }
+
   .panel-footer {
     display: flex;
     justify-content: space-between;

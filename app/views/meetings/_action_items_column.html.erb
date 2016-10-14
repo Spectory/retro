@@ -5,7 +5,15 @@
 <% action_items.each do |action_item| %>
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <%= action_item.title %>
+      <div> <%= action_item.title %></div>
+      <% case action_item.action_type
+        when 'start_doing' %>
+        <div class='glyphicon glyphicon-play'></div>
+      <% when 'keep_doing' %>
+        <div class='glyphicon glyphicon-forward'></div>
+      <% when 'stop_doing' %>
+        <div class='glyphicon glyphicon-stop'></div>
+      <% end %>
     </div>
     <div class="panel-body">
       <div><%= action_item.body %></div>
