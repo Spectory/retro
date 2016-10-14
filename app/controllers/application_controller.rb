@@ -23,6 +23,6 @@ class ApplicationController < ActionController::Base
     flash[:danger] = exception.message
     redirect_to :back
   rescue ActionController::RedirectBackError
-    redirect_to root_path
+    redirect_to '/'
   end
 end

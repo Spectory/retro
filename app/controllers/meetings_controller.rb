@@ -1,5 +1,5 @@
 class MeetingsController < ApplicationController
-  before_action :set_selected
+  # before_action :set_selected
 
   def create
     mid = Meeting.create!
@@ -12,6 +12,7 @@ class MeetingsController < ApplicationController
     else
       load_recent
     end
+    set_selected
     case @selected
     when 'discussion'
       @new_notes = Note.where(meeting: nil)
@@ -60,6 +61,10 @@ class MeetingsController < ApplicationController
   end
 
   def set_selected
-    @selected = params[:selected] || 'discussion'
+    @selected = if params[:selected] == 'none'
+                  @meeting.try(:created_at) < 1.day.ago ? 'new_action_items' : 'previous_action_items'
+                else
+                  @selected = params[:selected] || 'discussion'
+                end
   end
 end
