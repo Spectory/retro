@@ -13,6 +13,7 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'devise'
 gem 'turbolinks', '~> 5.0.0'
+gem 'awesome_print'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -23,7 +24,6 @@ group :development, :test do
   gem 'guard-shell'
   gem 'scss_lint', require: false
   gem 'guard-rubocop'
-  gem 'awesome_print'
   gem 'pry'
   gem 'pry-doc'
   gem 'factory_girl_rails'

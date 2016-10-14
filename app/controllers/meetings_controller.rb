@@ -1,4 +1,6 @@
 class MeetingsController < ApplicationController
+  before_action :set_selected
+
   def create
     mid = Meeting.create!
     redirect_to meeting_path(mid)
@@ -10,7 +12,6 @@ class MeetingsController < ApplicationController
     else
       load_recent
     end
-    @selected = params[:selected] || 'previous_action_items'
     case @selected
     when 'discussion'
       @new_notes = Note.where(meeting: nil)
@@ -56,5 +57,9 @@ class MeetingsController < ApplicationController
       @meeting = last_meetings.first
       @previouse_meeting = last_meetings.second
     end
+  end
+
+  def set_selected
+    @selected = params[:selected] || 'discussion'
   end
 end

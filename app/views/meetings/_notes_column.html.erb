@@ -6,21 +6,23 @@
     </div>
     <div class="panel-footer">
       <div>By: <%= note.create_by %></div>
-      <% unless reviewed %>
-        <%= link_to meeting_path(meeting, note: note), method: :patch do %>
-           <div class='reviewed-btn'>
-             Mark as reviewed <span class="glyphicon glyphicon-ok"></span>
-           </div>
+      <div class='notes-action-btns'>
+        <% unless note.meeting_id %>
+          <%= link_to meeting_path(meeting, note: note), method: :patch do %>
+             <div class='reviewed-btn'>
+               <span class="glyphicon glyphicon-ok"></span>
+               <span>Mark as reviewed</span>
+             </div>
+          <% end %>
         <% end %>
-      <% end %>
 
-      <% if reviewed %>
         <%= link_to new_action_item_path(meeting: meeting, note: note) do %>
-           <div class='reviewed-btn'>
-             Create action item <span class="glyphicon glyphicon-plus"></span>
+           <div>
+             <span class="glyphicon glyphicon-plus"></span>
+             <span>Create action item</span>
            </div>
         <% end %>
-      <% end %>
+      </div>
     </div>
   </div>
 <%end %>

@@ -22,5 +22,7 @@ class ApplicationController < ActionController::Base
     ap exception.backtrace
     flash[:danger] = exception.message
     redirect_to :back
+  rescue ActionController::RedirectBackError
+    redirect_to root_path
   end
 end

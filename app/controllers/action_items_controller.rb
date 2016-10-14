@@ -1,5 +1,7 @@
 class ActionItemsController < ApplicationController
   def new
+    note = Note.find(params['note'])
+    note.update(meeting_id: params['meeting'])
     @action_item = ActionItem.new(meeting_id: params['meeting'], note_id: params['note'])
   end
 
