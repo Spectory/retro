@@ -22,6 +22,21 @@ body a {
   }
 }
 
+#error_explanation {
+  // margin: 2% 0;
+  h2 {
+    display: none;
+  }
+  ul {
+    list-style:none;
+    padding-left:0;
+  }
+  li {
+    // float: left;
+    margin-right: 5px;
+  }
+}
+
 .main-wrapper {
   margin: 0;
   height: 100%;
