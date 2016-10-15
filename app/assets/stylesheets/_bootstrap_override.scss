@@ -38,6 +38,15 @@ $danger: #C74829;
   background-color: #fff;
 }
 
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  .glyphicon {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .panel-primary {
   border-color: $brown;
 }
