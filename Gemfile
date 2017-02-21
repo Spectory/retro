@@ -14,6 +14,7 @@ gem 'pg'
 gem 'devise'
 gem 'turbolinks', '~> 5.0.0'
 gem 'awesome_print'
+gem 'sendgrid-ruby'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -28,6 +29,7 @@ group :development, :test do
   gem 'pry-doc'
   gem 'factory_girl_rails'
   gem 'byebug'
+  gem 'dotenv-rails'
 end
 
 group :test do

@@ -1,0 +1,25 @@
+<h3>Meeting Summary</h3>
+<table border="1">
+  <tr>
+    <th>#</th>
+    <th>By</th>
+    <th>Note Title</th>
+    <th>Note Body</th>
+    <th>Action Item Title</th>
+    <th>Action Item Body</th>
+    <th>Assigned To</th>
+  </tr>
+  <tr>
+     <% @summary.each_with_index do |row, index| %>
+      <tr>
+        <td><%= index %></td>
+        <td><%= row[:by] %></td>
+        <td><%= row[:note_title] %></td>
+        <td><%= row[:note_body] %></td>
+        <td><%= row[:action_item_title] %></td>
+        <td><%= row[:action_item_body] %></td>
+        <td><%= row[:assiged_to] %></td>
+      </tr>
+    <% end %>
+  </tr>
+</table>
